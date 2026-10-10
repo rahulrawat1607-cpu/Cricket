@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://ninjasfiles.s3.amazonaws.com/asset_0000000000003226_1714596295_pics1.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1a0933;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.tagline {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.coaches-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+}
+
+.coach-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 4px solid #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.coach-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.coach-info {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(transparent, rgba(26, 9, 51, 0.95));
+    width: 100%;
+    padding: 30px 15px 20px 15px;
+    text-align: center;
+}
+
+.coach-info h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.coach-info p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.players-section {
+    background: #ffffff;
+    color: #333333;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.players-section h2 {
+    font-size: 1.8rem;
+    color: #1a0933;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.scroll-container {
+    height: 380px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.player-item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-item img {
+    width: 100%;
+    max-width: 380px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+
+.player-item p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a0933;
+}
+
+.rankings-table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #333333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.rankings-table th {
+    background-color: #1a0933;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.rankings-table td {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eeeeee;
+    font-weight: 600;
+}
+
+.rankings-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #1a0933;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+footer .info-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+footer .info-details {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
